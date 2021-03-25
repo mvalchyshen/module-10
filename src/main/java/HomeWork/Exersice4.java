@@ -22,8 +22,7 @@ public class Exersice4 {
     public static Stream<Long> randomNumbersStream(long a, long c, long m, long seed) {
         boolean calculate = isCalculate(a, c, m, seed);
         if (calculate) {
-            Stream<Long> iterate = Stream.iterate(seed, x -> ((a * x + c) % m));
-            return iterate;
+            return Stream.iterate(seed, x -> ((a * x + c) % m));
         } else
         throw new IllegalArgumentException("Wrong args!!!");
     }
